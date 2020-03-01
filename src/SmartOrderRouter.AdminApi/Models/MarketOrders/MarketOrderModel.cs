@@ -29,6 +29,7 @@ namespace SmartOrderRouter.AdminApi.Models.MarketOrders
         /// <summary>
         /// Indicates the order type.
         /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
         public OrderType Type { get; set; }
 
         /// <summary>

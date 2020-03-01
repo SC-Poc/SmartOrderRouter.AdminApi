@@ -1,5 +1,7 @@
 using System;
 using JetBrains.Annotations;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace SmartOrderRouter.AdminApi.Models.ExternalLimitOrders
 {
@@ -37,6 +39,7 @@ namespace SmartOrderRouter.AdminApi.Models.ExternalLimitOrders
         /// <summary>
         /// Indicates a type of the order.
         /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
         public OrderType Type { get; set; }
 
         /// <summary>
@@ -52,6 +55,7 @@ namespace SmartOrderRouter.AdminApi.Models.ExternalLimitOrders
         /// <summary>
         /// Indicated a status of the order.
         /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
         public ExternalLimitOrderStatus Status { get; set; }
 
         /// <summary>
